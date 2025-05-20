@@ -120,19 +120,6 @@ class NativeUpdater {
       }
     } on PlatformException catch (e) {
       developer.log(e.code.toString());
-
-      showDialog(
-        context: _context,
-        builder: (BuildContext context) {
-          return ErrorMaterialAlert(
-            appName: _appName,
-            description:
-                _errorText ?? 'This version of $_appName was not installed from Google Play Store.',
-            errorCloseButtonLabel:_errorCloseButtonLabel,
-            errorSubtitle: _errorSubtitle,
-          );
-        },
-      );
     }
   }
 }
